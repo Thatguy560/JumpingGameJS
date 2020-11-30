@@ -1,6 +1,7 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 var lastUpdated = new Date().getTime();
+var counter = 0;
 
 document.addEventListener("keyup", function (e) {
   if (e.keyCode === 32 && new Date().getTime() > lastUpdated + 400) {
@@ -30,6 +31,12 @@ var checkDead = setInterval(function () {
   if (blockLeft < 90 && blockLeft > 0 && characterTop >= 140) {
     block.style.animation = "none";
     block.style.display = "none";
+    line.style.animation = "none";
+    line.style.display = "none";
     alert("You Crashed!");
+    console.log = function () {};
+  } else {
+    var highScore = [];
+    console.log(highScore.push(counter++));
   }
 }, 10);

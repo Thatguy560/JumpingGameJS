@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" onclick="jump()">
-    <!-- onclick="jump()" - Would go after lang="en" -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumping Game</title>
     <link rel="stylesheet" href="style.css">
+    <title>Jumping Game</title>
 </head>
 <body>
     <div class="game">
         <div class="sun"></div>
         <div class="ground"></div>
-        <div class="line"></div>
+        <div id="line"></div>
         <div id="character"></div>
         <div id="block"></div>
     </div>
-    
+    <div>
+        <h1>Score: <span id="scoreBoard"></span></h1>
+        <button id="restartButton">Restart</button>
+    </div>
 </body>
 <script src="game.js"></script>
 </html>

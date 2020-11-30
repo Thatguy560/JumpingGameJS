@@ -91,7 +91,7 @@ p {
   right: -550px;
 }
 
-.line {
+#line {
   width: 2000px;
   height: 10px;
   border-bottom: 6px dashed white;
@@ -118,4 +118,15 @@ p {
   /* margin-right: 150px; */
   position: fixed;
   bottom: 610px;
+}
+
+h1 {
+  color: black;
+  top: 275px;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  text-align: center;
 }
