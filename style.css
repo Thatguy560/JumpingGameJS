@@ -1,72 +1,77 @@
 * {
   padding: 0;
   margin: 0;
-} /* Gets rid of basic browser padding and margins */
+  overflow-x: hidden;
+}
+/* Gets rid of basic browser padding and margins */
 
 .game {
   width: 700px;
-  height: 200px;
+  height: 230px;
   border: 2px solid black;
   background-color: skyblue;
+  margin: auto; /* Centres game to centre */
 }
 
 #character {
-  width: 50px;
+  width: 90px;
   height: 50px;
-  border-radius: 100%;
-  background-color: red;
-  border: 1px solid black;
+  /* border-radius: 100%; */
+  /* background-color: red; */
+  /* border: 1px solid black; */
   position: relative;
-  top: 120px;
-  left: 40px;
+  top: 150px;
+  content: url(http://clipart-library.com/image_gallery2/Car-Transparent.png);
 }
-
-.animate {
+.jump-animate {
   animation: jump 500ms;
 }
 
 @keyframes jump {
   0% {
-    top: 125px;
+    top: 150px;
   }
   30% {
-    top: 65px;
+    top: 100px;
   }
   70% {
-    top: 65px;
+    top: 100px;
   }
   100% {
-    top: 125px;
+    top: 150px;
   }
 }
 
 #block {
   width: 30px;
   height: 30px;
-  background-color: black;
+  /* background-color: black; */
   position: relative;
-  left: 670px;
-  top: 90px;
-  animation: block 1s infinite; /* adds animation to make block move left */
+  top: 120px;
+  left: 480px;
+  animation: block 1s infinite linear; /* adds animation to make block move left */
+  content: url(http://clipart-library.com/img/1603226.png);
 }
-
-/* @keyframes rule specifies the animation code. */
 @keyframes block {
   0% {
-    left: 670px;
+    left: 700px;
   }
   100% {
-    left: -50px;
+    left: -200px;
   }
 }
 
-.grass {
+p {
+  text-align: center;
+}
+
+.ground {
   width: 700px;
-  height: 20px;
-  background-color: #3c7c1b;
+  height: 50px;
+  background-color: grey;
   border: 1px solid black;
-  position: relative;
-  top: 180px;
+  position: absolute;
+  top: 181px;
 }
 
 .sun {
@@ -83,5 +88,37 @@
   box-shadow: 0px 0px 40px 15px white;
   position: Absolute;
   bottom: 725px;
-  right: 200px;
+  right: -550px;
 }
+
+.line {
+  width: 40px;
+  height: 5px;
+  background: yellow;
+  border: 1px solid black;
+  /* float: left; */
+  margin-right: 150px;
+  position: Absolute;
+  bottom: 610px;
+}
+
+.dot {
+  width: 40px;
+  height: 5px;
+  background: yellow;
+  border: 1px solid black;
+  float: left;
+  /* margin-right: 150px; */
+  position: fixed;
+  bottom: 610px;
+}
+
+/* .line {
+    width: 35px;
+    height: 10px;
+    background: yellow;
+    float: left;
+    margin-right: 150px;
+    position: absolute;
+    top: 145px;
+  } */
