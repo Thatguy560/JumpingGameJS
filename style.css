@@ -116,10 +116,28 @@ p {
   text-align: center;
 }
 
-#container {
+.score-message button {
   background-color: black;
   color: white;
   border-color: white;
   cursor: pointer;
+  text-align: center;
+  margin: auto;
+  font-size: 2.5rem;
+}
+
+.score-message button:hover {
+  background-color: black;
+  color: red;
+  border-color: white;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  font-size: 2.5rem;
+}
+
+#restartButton {
+  cursor: pointer;
+  margin: auto;
   text-align: center;
 }

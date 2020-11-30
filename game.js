@@ -2,6 +2,7 @@ var character = document.getElementById("character");
 var block = document.getElementById("block");
 var lastUpdated = new Date().getTime();
 var counter = 0;
+var maxScore = [];
 
 document.addEventListener("keyup", function (e) {
   if (e.keyCode === 32 && new Date().getTime() > lastUpdated + 400) {
@@ -34,7 +35,9 @@ var checkDead = setInterval(function () {
     line.style.animation = "none";
     line.style.display = "none";
     alert("You Crashed: Your score is " + Math.floor(counter / 100));
-    document.getElementById("scoreBoard").innerHTML = "none";
+    document.getElementsByTagName("h1")[0].innerHTML = "Score: 0";
+    maxScore.push(counter);
+    counter = 0;
   } else {
     counter++;
     document.getElementById("scoreBoard").innerHTML = Math.floor(counter / 100);
