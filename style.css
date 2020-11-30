@@ -16,9 +16,6 @@
 #character {
   width: 90px;
   height: 50px;
-  /* border-radius: 100%; */
-  /* background-color: red; */
-  /* border: 1px solid black; */
   position: relative;
   top: 150px;
   content: url(http://clipart-library.com/image_gallery2/Car-Transparent.png);
@@ -50,7 +47,6 @@
   left: 480px;
   animation: block 1s infinite linear; /* adds animation to make block move left */
   content: url(http://clipart-library.com/img/1603226.png);
-  /* background-color: black; */
 }
 @keyframes block {
   0% {
@@ -109,17 +105,6 @@ p {
   }
 }
 
-.dot {
-  width: 40px;
-  height: 5px;
-  background: yellow;
-  border: 1px solid black;
-  float: left;
-  /* margin-right: 150px; */
-  position: fixed;
-  bottom: 610px;
-}
-
 h1 {
   color: black;
   top: 275px;
@@ -128,5 +113,13 @@ h1 {
 }
 
 p {
+  text-align: center;
+}
+
+#container {
+  background-color: black;
+  color: white;
+  border-color: white;
+  cursor: pointer;
   text-align: center;
 }

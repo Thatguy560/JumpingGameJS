@@ -33,10 +33,10 @@ var checkDead = setInterval(function () {
     block.style.display = "none";
     line.style.animation = "none";
     line.style.display = "none";
-    alert("You Crashed!");
-    console.log = function () {};
+    alert("You Crashed: Your score is " + Math.floor(counter / 100));
+    document.getElementById("scoreBoard").innerHTML = "none";
   } else {
-    var highScore = [];
-    console.log(highScore.push(counter++));
+    counter++;
+    document.getElementById("scoreBoard").innerHTML = Math.floor(counter / 100);
   }
 }, 10);
