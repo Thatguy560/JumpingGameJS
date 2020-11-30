@@ -45,12 +45,12 @@
 #block {
   width: 30px;
   height: 30px;
-  /* background-color: black; */
   position: relative;
   top: 120px;
   left: 480px;
   animation: block 1s infinite linear; /* adds animation to make block move left */
   content: url(http://clipart-library.com/img/1603226.png);
+  /* background-color: black; */
 }
 @keyframes block {
   0% {
@@ -92,14 +92,21 @@ p {
 }
 
 .line {
-  width: 40px;
-  height: 5px;
-  background: yellow;
-  border: 1px solid black;
-  /* float: left; */
-  margin-right: 150px;
-  position: Absolute;
-  bottom: 610px;
+  width: 2000px;
+  height: 10px;
+  border-bottom: 6px dashed white;
+  position: absolute;
+  top: 195px;
+  animation: line 1s infinite linear;
+}
+
+@keyframes line {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -150px;
+  }
 }
 
 .dot {
@@ -112,13 +119,3 @@ p {
   position: fixed;
   bottom: 610px;
 }
-
-/* .line {
-    width: 35px;
-    height: 10px;
-    background: yellow;
-    float: left;
-    margin-right: 150px;
-    position: absolute;
-    top: 145px;
-  } */
