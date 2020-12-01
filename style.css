@@ -6,7 +6,6 @@
 /* Gets rid of basic browser padding and margins */
 
 .game {
-  /* position: relative; */
   width: 700px;
   height: 230px;
   border: 2px solid black;
@@ -140,10 +139,4 @@ p {
 
 .score-message button:hover {
   background-color: #2eb5e5;
-}
-
-#restartButton {
-  cursor: pointer;
-  margin: auto;
-  text-align: center;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
-    <!-- onclick="jump()" -->
+    <!-- onclick="startGame()" -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,13 @@
     <div class="score-message" id="scoreMessage">
         <h1>High Score: <span id="topScore"></span></h1>
         <h2>Current Score: <span id="scoreBoard"></span></h2>
-        <p><button id="restartButton">Restart</button></p>
+        <p><button onClick="window.location.reload()" id="restartButton">Restart</button></p>
     </div>
 </body>
-<script src="game.js"></script>
+<script src="game.js">
+    if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("topScore", maxScore);
+    document.getElementById("topScore").innerHTML = localStorage.getItem("topScore") 
+    }
+</script>
 </html>
