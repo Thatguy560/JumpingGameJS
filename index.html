@@ -21,10 +21,5 @@
         <p><button onClick="window.location.reload()" id="restartButton">Restart</button></p>
     </div>
 </body>
-<script src="game.js">
-    if (typeof(Storage) !== "undefined") {
-    localStorage.setItem("topScore", maxScore);
-    document.getElementById("topScore").innerHTML = localStorage.getItem("topScore") 
-    }
-</script>
+<script src="game.js"></script>
 </html>

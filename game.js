@@ -2,10 +2,6 @@ var character = document.getElementById("character");
 var block = document.getElementById("block");
 var lastUpdated = new Date().getTime();
 var counter = 0;
-var maxScore = [];
-const restartButton = document.getElementById("restartButton");
-
-// startGame();
 
 jump = () => {
   if (character.classList != "jump-animate") {
@@ -23,8 +19,19 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
-function startGame() {
-  console.log("Start Game");
+// function startGame() {
+//   console.log("Start Game");
+// }
+
+function keepScore() {
+  var maxScore = JSON.parse(localStorage.maxScore || "[]");
+  maxScore.push(Math.floor(counter / 100));
+  localStorage.setItem("maxScore", JSON.stringify(maxScore));
+  var maxScore = localStorage.getItem("maxScore");
+  var maxScore = JSON.parse(maxScore);
+  document.getElementById("topScore").innerHTML = maxScore.sort((a, b) => {
+    return b - a;
+  })[0];
 }
 
 var checkDead = setInterval(function () {
@@ -38,25 +45,11 @@ var checkDead = setInterval(function () {
     block.style.animation = "none";
     line.style.animation = "none";
     character.style.animation = "none";
-    alert("You Crashed: Your score is " + Math.floor(counter / 100));
-    maxScore.push(Math.floor(counter / 100));
     document.getElementById("scoreBoard").style.visibility = "hidden";
-    document.getElementById("topScore").innerHTML = maxScore.sort(
-      (a, b) => b - a
-    )[0];
-    // counter = 0;
+    keepScore();
+    alert("You Crashed: Your score is " + Math.floor(counter / 100));
   } else {
     counter++;
     document.getElementById("scoreBoard").innerHTML = Math.floor(counter / 100);
   }
 }, 10);
-
-restartButton.addEventListener("click", resetGame);
-
-function resetGame() {
-  console.log("test");
-}
-
-// document.getElementsByTagName("h2")[0].innerHTML = "Current Score: 0";
-// block.style.display = "none";
-// line.style.display = "none";
