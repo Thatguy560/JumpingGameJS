@@ -11,6 +11,8 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
+function startGame() {}
+
 function jump() {
   if (character.classList != "jump-animate") {
     character.classList.add("jump-animate");
@@ -35,11 +37,17 @@ var checkDead = setInterval(function () {
     line.style.animation = "none";
     line.style.display = "none";
     alert("You Crashed: Your score is " + Math.floor(counter / 100));
-    document.getElementsByTagName("h1")[0].innerHTML = "Score: 0";
-    maxScore.push(counter);
+    maxScore.push(Math.floor(counter / 100));
+    document.getElementById("scoreBoard").style.visibility = "hidden";
+    document.getElementById("topScore").innerHTML = maxScore.sort(
+      (a, b) => b - a
+    )[0];
     counter = 0;
   } else {
     counter++;
     document.getElementById("scoreBoard").innerHTML = Math.floor(counter / 100);
   }
 }, 10);
+
+// document.getElementsByTagName("h2")[0].innerHTML = "Current Score: 0";
+// console.log(maxScore.sort((a, b) => b - a)[0]);

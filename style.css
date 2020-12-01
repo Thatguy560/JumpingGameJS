@@ -6,11 +6,12 @@
 /* Gets rid of basic browser padding and margins */
 
 .game {
+  /* position: relative; */
   width: 700px;
   height: 230px;
   border: 2px solid black;
-  background-color: skyblue;
-  margin: auto; /* Centres game to centre */
+  background-color: #2eb5e5;
+  margin: auto;
 }
 
 #character {
@@ -57,10 +58,6 @@
   }
 }
 
-p {
-  text-align: center;
-}
-
 .ground {
   width: 700px;
   height: 50px;
@@ -71,6 +68,7 @@ p {
 }
 
 .sun {
+  position: Absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -82,7 +80,6 @@ p {
   background: white;
   opacity: 0.9;
   box-shadow: 0px 0px 40px 15px white;
-  position: Absolute;
   bottom: 725px;
   right: -550px;
 }
@@ -110,30 +107,39 @@ h1 {
   top: 275px;
   margin: auto;
   text-align: center;
+  margin-top: 10px;
+}
+
+h2 {
+  color: black;
+  top: 275px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
 p {
   text-align: center;
+  margin: 25px;
 }
 
 .score-message button {
-  background-color: black;
-  color: white;
-  border-color: white;
-  cursor: pointer;
   text-align: center;
-  margin: auto;
   font-size: 2.5rem;
+  background-color: #e0e1e6;
+  font-family: inherit;
+  color: black;
+  flex: 1;
+  outline: 1px solid #888888;
+  cursor: pointer;
+}
+
+.div .score-message {
+  padding: 15px;
 }
 
 .score-message button:hover {
-  background-color: black;
-  color: red;
-  border-color: white;
-  cursor: pointer;
-  text-align: center;
-  margin: auto;
-  font-size: 2.5rem;
+  background-color: #2eb5e5;
 }
 
 #restartButton {
