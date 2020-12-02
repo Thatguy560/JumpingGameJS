@@ -19,10 +19,6 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
-// function startGame() {
-//   console.log("Start Game");
-// }
-
 function keepScore() {
   var maxScore = JSON.parse(localStorage.maxScore || "[]");
   maxScore.push(Math.floor(counter / 100));

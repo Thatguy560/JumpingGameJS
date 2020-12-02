@@ -5,6 +5,10 @@
 }
 /* Gets rid of basic browser padding and margins */
 
+body {
+  background-color: white;
+}
+
 .game {
   width: 700px;
   height: 230px;
@@ -79,8 +83,8 @@
   background: white;
   opacity: 0.9;
   box-shadow: 0px 0px 40px 15px white;
-  bottom: 725px;
-  right: -550px;
+  bottom: 640px;
+  right: -540px;
 }
 
 #line {
@@ -107,6 +111,7 @@ h1 {
   margin: auto;
   text-align: center;
   margin-top: 10px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 h2 {
@@ -115,6 +120,7 @@ h2 {
   margin: auto;
   text-align: center;
   margin-top: 10px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 p {
@@ -122,21 +128,34 @@ p {
   margin: 25px;
 }
 
-.score-message button {
+.score-message #restartButton {
   text-align: center;
   font-size: 2.5rem;
-  background-color: #e0e1e6;
-  font-family: inherit;
-  color: black;
+  background-color: #337ab7;
+  color: #fff;
+  border-color: #2e6da4;
+  outline: 1px solid black;
   flex: 1;
-  outline: 1px solid #888888;
   cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.div .score-message {
-  padding: 15px;
-}
-
-.score-message button:hover {
+.score-message #restartButton:hover {
   background-color: #2eb5e5;
+}
+
+.score-message #resetButton {
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #d9534f;
+  color: #fff;
+  border-color: #d43f3a;
+  outline: 1px solid black;
+  flex: 1;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.score-message #resetButton:hover {
+  background-color: red;
 }
