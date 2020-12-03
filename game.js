@@ -19,6 +19,24 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
+function increaseBlockSpeed() {
+  if (Math.floor(counter / 100) === 0) {
+    block.classList.add("block-animate");
+  } else if (Math.floor(counter / 100) === 10) {
+    block.classList.remove("block-animate");
+    block.classList.add("block-animate-2");
+  } else if (Math.floor(counter / 100) === 30) {
+    block.classList.remove("block-animate-2");
+    block.classList.add("block-animate-3");
+  } else if (Math.floor(counter / 100) > 50) {
+    block.classList.remove("block-animate-3");
+    block.classList.add("block-animate-4");
+  } else if (Math.floor(counter / 100) === 100) {
+    block.classList.remove("block-animate-4");
+    block.classList.add("block-animate-max");
+  }
+}
+
 function keepScore() {
   var maxScore = JSON.parse(localStorage.maxScore || "[]");
   maxScore.push(Math.floor(counter / 100));
@@ -46,6 +64,7 @@ var checkDead = setInterval(function () {
     alert("You Crashed: Your score is " + Math.floor(counter / 100));
   } else {
     counter++;
+    increaseBlockSpeed();
     document.getElementById("scoreBoard").innerHTML = Math.floor(counter / 100);
   }
 }, 10);

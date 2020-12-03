@@ -10,7 +10,7 @@ body {
 }
 
 .game {
-  width: 700px;
+  width: 800px;
   height: 230px;
   border: 2px solid black;
   background-color: #2eb5e5;
@@ -49,20 +49,44 @@ body {
   position: relative;
   top: 120px;
   left: 480px;
-  animation: block 1s infinite linear; /* adds animation to make block move left */
   content: url(http://clipart-library.com/img/1603226.png);
 }
+.block-animate {
+  animation: block infinite linear;
+  animation-duration: 2.5s;
+}
+
+.block-animate-2 {
+  animation: block infinite linear;
+  animation-duration: 2s;
+}
+
+.block-animate-3 {
+  animation: block infinite linear;
+  animation-duration: 1.5s;
+}
+
+.block-animate-4 {
+  animation: block infinite linear;
+  animation-duration: 1s;
+}
+
+.block-animate-max {
+  animation: block infinite linear;
+  animation-duration: 500ms
+}
+
 @keyframes block {
   0% {
-    left: 700px;
+    left: 800px;
   }
   100% {
-    left: -200px;
+    left: -250px;
   }
 }
 
 .ground {
-  width: 700px;
+  width: 800px;
   height: 50px;
   background-color: grey;
   border: 1px solid black;
