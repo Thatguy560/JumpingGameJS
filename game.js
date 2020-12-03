@@ -20,18 +20,19 @@ document.addEventListener("keyup", function (e) {
 });
 
 function increaseBlockSpeed() {
-  if (Math.floor(counter / 100) === 0) {
+  let score = Math.floor(counter / 100);
+  if (score === 0 || score < 10) {
     block.classList.add("block-animate");
-  } else if (Math.floor(counter / 100) === 10) {
+  } else if (score === 10 || score < 30) {
     block.classList.remove("block-animate");
     block.classList.add("block-animate-2");
-  } else if (Math.floor(counter / 100) === 30) {
+  } else if (score === 30 || score < 51) {
     block.classList.remove("block-animate-2");
     block.classList.add("block-animate-3");
-  } else if (Math.floor(counter / 100) > 50) {
+  } else if (score === 51 || score < 101) {
     block.classList.remove("block-animate-3");
     block.classList.add("block-animate-4");
-  } else if (Math.floor(counter / 100) === 100) {
+  } else {
     block.classList.remove("block-animate-4");
     block.classList.add("block-animate-max");
   }

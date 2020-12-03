@@ -73,8 +73,9 @@ body {
 
 .block-animate-max {
   animation: block infinite linear;
-  animation-duration: 500ms
+  animation-duration: 700ms
 }
+
 
 @keyframes block {
   0% {
@@ -125,7 +126,7 @@ body {
     left: 0px;
   }
   100% {
-    left: -150px;
+    left: -250px;
   }
 }
 
