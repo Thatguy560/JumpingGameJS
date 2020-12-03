@@ -29,7 +29,7 @@ function increaseBlockSpeed() {
   } else if (score === 30 || score < 51) {
     block.classList.remove("block-animate-2");
     block.classList.add("block-animate-3");
-  } else if (score === 51 || score < 101) {
+  } else if (score === 51 || score < 102.8) {
     block.classList.remove("block-animate-3");
     block.classList.add("block-animate-4");
   } else {
