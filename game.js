@@ -3,12 +3,17 @@ var block = document.getElementById("block");
 var lastUpdated = new Date().getTime();
 var counter = 0;
 
+function jumpSound() {
+  var jumpAudio = new Audio("528568__evan-schad__8-bit-jump-3 (1).wav");
+  jumpAudio.loop = false;
+  jumpAudio.volume = 0.5;
+  jumpAudio.play();
+}
+
 jump = () => {
   if (character.classList != "jump-animate") {
     character.classList.add("jump-animate");
-    var jumpAudio = new Audio("528568__evan-schad__8-bit-jump-3 (1).wav");
-    jumpAudio.loop = false;
-    jumpAudio.play();
+    jumpSound();
   }
   setTimeout(function () {
     character.classList.remove("jump-animate");
@@ -77,11 +82,12 @@ function keepScore() {
   document.getElementById("topScore").innerHTML = maxScore;
 }
 
-function gameOver() {
+function carCrash() {
   var carCrashAudio = new Audio(
     "151624__qubodup__clank-car-crash-collision (1).wav"
   );
   carCrashAudio.loop = false;
+  carCrashAudio.volume = 0.3;
   carCrashAudio.play();
 }
 
@@ -94,7 +100,7 @@ var checkDead = setInterval(function () {
   );
   if (blockLeft < 90 && blockLeft > 0 && characterTop >= 140) {
     block.style.animation = "none";
-    gameOver();
+    carCrash();
     line.style.animation = "none";
     character.style.animation = "none";
     document.getElementById("scoreBoard").style.visibility = "hidden";
