@@ -6,6 +6,9 @@ var counter = 0;
 jump = () => {
   if (character.classList != "jump-animate") {
     character.classList.add("jump-animate");
+    var jumpAudio = new Audio("528568__evan-schad__8-bit-jump-3 (1).wav");
+    jumpAudio.loop = false;
+    jumpAudio.play();
   }
   setTimeout(function () {
     character.classList.remove("jump-animate");
@@ -46,6 +49,7 @@ function increaseBlockSpeed() {
   } else if (score === 10 || score < 30) {
     block.classList.remove("block-animate");
     block.classList.add("block-animate-2");
+    document.getElementById("test").style.visibility = "hidden";
   } else if (score === 30 || score < 51) {
     block.classList.remove("block-animate-2");
     block.classList.add("block-animate-3");
@@ -82,6 +86,11 @@ var checkDead = setInterval(function () {
   );
   if (blockLeft < 90 && blockLeft > 0 && characterTop >= 140) {
     block.style.animation = "none";
+    // var carCrashAudio = new Audio(
+    //   "151624__qubodup__clank-car-crash-collision (1).wav"
+    // );
+    // carCrashAudio.loop = false;
+    // carCrashAudio.play();
     line.style.animation = "none";
     character.style.animation = "none";
     document.getElementById("scoreBoard").style.visibility = "hidden";

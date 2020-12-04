@@ -54,6 +54,7 @@ body {
 .block-animate {
   animation: block infinite linear;
   animation-duration: 2.5s;
+  animation-delay: 2s;
 }
 
 .block-animate-2 {
@@ -146,6 +147,13 @@ h2 {
   text-align: center;
   margin-top: 10px;
   font-family: "Courier New", Courier, monospace;
+}
+
+h3 {
+  color: black;
+  position: Absolute;
+  right: 300px;
+  top: 25px;
 }
 
 p {
