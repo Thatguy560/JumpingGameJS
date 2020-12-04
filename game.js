@@ -77,6 +77,14 @@ function keepScore() {
   document.getElementById("topScore").innerHTML = maxScore;
 }
 
+function gameOver() {
+  var carCrashAudio = new Audio(
+    "151624__qubodup__clank-car-crash-collision (1).wav"
+  );
+  carCrashAudio.loop = false;
+  carCrashAudio.play();
+}
+
 var checkDead = setInterval(function () {
   let characterTop = parseInt(
     window.getComputedStyle(character).getPropertyValue("top")
@@ -86,11 +94,7 @@ var checkDead = setInterval(function () {
   );
   if (blockLeft < 90 && blockLeft > 0 && characterTop >= 140) {
     block.style.animation = "none";
-    // var carCrashAudio = new Audio(
-    //   "151624__qubodup__clank-car-crash-collision (1).wav"
-    // );
-    // carCrashAudio.loop = false;
-    // carCrashAudio.play();
+    gameOver();
     line.style.animation = "none";
     character.style.animation = "none";
     document.getElementById("scoreBoard").style.visibility = "hidden";
