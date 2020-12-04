@@ -109,8 +109,8 @@ body {
   background: white;
   opacity: 0.9;
   box-shadow: 0px 0px 40px 15px white;
-  bottom: 640px;
-  right: -540px;
+  bottom: 575px;
+  right: -600px;
 }
 
 #line {
@@ -152,7 +152,7 @@ h2 {
 h3 {
   color: black;
   position: Absolute;
-  right: 300px;
+  right: 575px;
   top: 25px;
 }
 
