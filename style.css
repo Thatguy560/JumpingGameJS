@@ -1,9 +1,8 @@
 * {
   padding: 0;
-  margin: 0;
+  margin: 0; /* Gets rid of basic browser padding and margins */
   overflow-x: hidden;
 }
-/* Gets rid of basic browser padding and margins */
 
 body {
   background-color: white;
