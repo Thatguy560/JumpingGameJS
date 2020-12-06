@@ -2,7 +2,6 @@ var character = document.getElementById("character");
 var block = document.getElementById("block");
 var lastUpdated = new Date().getTime();
 var counter = 0;
-var score = Math.floor(counter / 100);
 
 jumpSound = () => {
   let jumpAudio = new Audio("Jump.wav");
@@ -57,6 +56,7 @@ document.addEventListener("keyup", (e) => {
 // });
 
 increaseBlockSpeed = () => {
+  var score = Math.floor(counter / 100);
   if (score === 0 || score < 10) {
     block.classList.add("block-animate");
   } else if (score === 10 || score < 30) {
