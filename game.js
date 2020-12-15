@@ -4,14 +4,14 @@ var lastUpdated = new Date().getTime();
 var counter = 0;
 
 jumpSound = () => {
-  let jumpAudio = new Audio("Jump.wav");
+  let jumpAudio = new Audio("./Audio/Jump.wav");
   jumpAudio.loop = false;
   jumpAudio.volume = 0.5;
   jumpAudio.play();
 };
 
 carCrashSound = () => {
-  let carCrashAudio = new Audio("carCrash.wav");
+  let carCrashAudio = new Audio("./Audio/carCrash.wav");
   carCrashAudio.loop = false;
   carCrashAudio.volume = 0.3;
   carCrashAudio.play();
