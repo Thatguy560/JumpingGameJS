@@ -4,9 +4,9 @@
 
 A simple jumping game (Still adding to it) made as a means to practice Vanilla JS and get some experience modifying the Document Object Model (DOM). Press space to jump over the incoming rock object, the higher your score the faster it moves! Click on restart if you crash to reset the game.
 
-<!-- # Visit the deployed app
+# Visit the deployed app
 
-You can find the deployed app via the following link: https://Thatguy560.github.io/CalculatorReact -->
+You can find the deployed app via the following link: https://jumping-game.herokuapp.com/
 
 # Installation
 
@@ -24,7 +24,7 @@ You can find the deployed app via the following link: https://Thatguy560.github.
 
 # Technologies Used
 
-Javascript, HTML/CSS
+Javascript, HTML/CSS, Heroku
 
 # Useful Links
 
@@ -33,5 +33,4 @@ https://stackoverflow.com/questions/38709923/why-is-requestanimationframe-better
 
 # To do list - In Progress
 
-- Deploy application
 - Add some additional features if I can think of any
