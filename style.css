@@ -30,8 +30,8 @@ body {
   height: 50px;
   position: relative;
   top: 150px;
+  content: url("./Images/Car-Transparent.png");
   /* animation: brightness 25s infinite alternate; */
-  content: url(http://clipart-library.com/image_gallery2/Car-Transparent.png);
 }
 .jump-animate {
   animation: jump 500ms;
@@ -67,7 +67,7 @@ body {
   position: relative;
   top: 120px;
   left: 480px;
-  content: url(http://clipart-library.com/img/1603226.png);
+  content: url("./Images/1603226.png");
 }
 .block-animate {
   animation: block infinite linear;
