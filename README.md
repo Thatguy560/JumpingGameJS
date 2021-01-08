@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="DemoOfApp.gif" alt="animated" />
-</p>)
+</p>
 
 A simple jumping game (Still adding to it) made as a means to practice Vanilla JS and get some experience modifying the Document Object Model (DOM). Press space to jump over the incoming rock object, the higher your score the faster it moves! Click on restart if you crash to reset the game.
 
