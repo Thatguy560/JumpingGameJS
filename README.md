@@ -33,8 +33,3 @@ Javascript, HTML/CSS, Heroku
 # Useful Links
 
 https://stackoverflow.com/questions/38709923/why-is-requestanimationframe-better-than-setinterval-or-settimeout
-
-
-# To do list - In Progress
-
-- Add some additional features if I can think of any
