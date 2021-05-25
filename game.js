@@ -35,26 +35,6 @@ document.addEventListener("keyup", (e) => {
   }
 });
 
-// moveDown = () => {
-//   character.style.top = 200 + "px";
-// };
-
-// document.addEventListener("keydown", (e) => {
-//   if (e.keyCode === 40) {
-//     moveDown();
-//   }
-// });
-
-// moveUp = () => {
-//   character.style.top = 150 + "px";
-// };
-
-// document.addEventListener("keyup", (e) => {
-//   if (e.keyCode === 38) {
-//     moveUp();
-//   }
-// });
-
 increaseBlockSpeed = () => {
   var score = Math.floor(counter / 100);
   if (score === 0 || score < 10) {
